@@ -24,7 +24,7 @@
                ratio="0.5"
                relative="org.eclipse.ui.views.TaskList"
                relationship="right"
-               id="herokclipseMyAppsView">
+               id="heroclipse.views.MyAppsView">
          </view>
       </perspectiveExtension>
    </extension>
@@ -36,9 +36,7 @@
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
-      <page
-            category="Heroku"
-            class="heroclipse.HerokuPreferencesPagev3"
+      <page class="heroclipse.HerokuPreferencesPagev3"
             id="Heroclipse.page1"
             name="Heroku">
       </page>
@@ -46,9 +44,16 @@
    <extension
          point="org.eclipse.ui.editors">
       <editor
-            class="heroclipse.editor.AppInfoEditor"
+            class="heroclipse.editors.AppInfoEditorMaster"
             id="heroclipse.editors.AppInfoEditor"
             name="Manage Heroku App">
+      </editor>
+      <editor
+            class="heroclipse.editors.HerokuAppEditor"
+            extensions=".heroku"
+            icon="icons/sample.gif"
+            id="heroclipse.editors.HerokuAppEditor"
+            name="Heroku App Info">
       </editor>
    </extension>
    <extension
@@ -59,7 +64,7 @@
          <menu
                commandId="heroclipse.commands.MyApps"
                id="Heroclipse"
-               label="Heroclipse"
+               label="Heroku"
                mnemonic="H">
             <command
                   commandId="heroclipse.commands.MyApps"
