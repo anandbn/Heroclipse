@@ -3,6 +3,8 @@ package heroclipse.views;
 
 import heroclipse.editors.HerokuAppEditor;
 import heroclipse.editors.HerokuAppEditorInput;
+import heroclipse.utils.HeroclipsePreferencesUtil;
+
 import java.util.List;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Table;
@@ -54,8 +56,7 @@ public class MyAppsView extends ViewPart {
 		public void dispose() {
 		}
 		public Object[] getElements(Object parent) {
-			//String apiKey = HeroclipsePreferencesUtil.getPreferenceValue("apiKey");
-			String apiKey = "f4e237dbf5747df56dc0b9e7c056e3bb2f7d05d5";
+			String apiKey = HeroclipsePreferencesUtil.getPreferenceValue("apiKey");
 			HerokuAPI api = new HerokuAPI(apiKey);
 			List<App> myApps = api.listApps();
 			

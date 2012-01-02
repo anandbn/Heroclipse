@@ -4,6 +4,8 @@ package heroclipse.editors;
 
 
 
+import heroclipse.utils.HeroclipsePreferencesUtil;
+
 import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IResourceChangeEvent;
 import org.eclipse.core.resources.IResourceChangeListener;
@@ -136,8 +138,7 @@ public class HerokuAppEditor extends MultiPageEditorPart implements IResourceCha
 	}
 	
 	private void intializeApplicationInfo(HerokuAppEditorInput appInput) {
-		//HerokuAPI api =new HerokuAPI(HeroclipsePreferencesUtil.getPreferenceValue("apiKey"));
-		HerokuAPI api = new HerokuAPI("f4e237dbf5747df56dc0b9e7c056e3bb2f7d05d5");
+		HerokuAPI api =new HerokuAPI(HeroclipsePreferencesUtil.getPreferenceValue("apiKey"));
 		appInput.setCollaborators(api.listCollaborators(appInput.getName()));
 		appInput.setConfigVariables(api.listConfig(appInput.getName()));
 		appInput.setReleases(api.listReleases(appInput.getName()));
