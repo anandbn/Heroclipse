@@ -1,8 +1,9 @@
 package heroclipse.views;
 
 
-import heroclipse.editor.AppInfoEditor;
-import heroclipse.editor.HerokuAppEditorInput;
+import heroclipse.editors.AppInfoEditor;
+import heroclipse.editors.HerokuAppEditor;
+import heroclipse.editors.HerokuAppEditorInput;
 import heroclipse.utils.HeroclipsePreferencesUtil;
 
 import java.util.List;
@@ -56,8 +57,8 @@ public class MyAppsView extends ViewPart {
 		public void dispose() {
 		}
 		public Object[] getElements(Object parent) {
-			String apiKey = HeroclipsePreferencesUtil.getPreferenceValue("apiKey");
-			//String apiKey = "f4e237dbf5747df56dc0b9e7c056e3bb2f7d05d5";
+			//String apiKey = HeroclipsePreferencesUtil.getPreferenceValue("apiKey");
+			String apiKey = "f4e237dbf5747df56dc0b9e7c056e3bb2f7d05d5";
 			HerokuAPI api = new HerokuAPI(apiKey);
 			List<App> myApps = api.listApps();
 			
@@ -203,7 +204,8 @@ public class MyAppsView extends ViewPart {
 				Object obj = ((IStructuredSelection)selection).getFirstElement();
 				IWorkbenchPage myAppsViewPage = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
 				try {
-					myAppsViewPage.openEditor(new HerokuAppEditorInput((App)obj), AppInfoEditor.ID);
+					//myAppsViewPage.openEditor(new HerokuAppEditorInput((App)obj), AppInfoEditor.ID);
+					myAppsViewPage.openEditor((IEditorInput)new HerokuAppEditorInput((App)obj), HerokuAppEditor.ID);
 				} catch (PartInitException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

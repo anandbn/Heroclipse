@@ -1,7 +1,7 @@
 package heroclipse.handlers;
 
-import heroclipse.editor.AppInfoEditor;
-import heroclipse.editor.HerokuAppEditorInput;
+import heroclipse.editors.AppInfoEditor;
+import heroclipse.editors.HerokuAppEditorInput;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;

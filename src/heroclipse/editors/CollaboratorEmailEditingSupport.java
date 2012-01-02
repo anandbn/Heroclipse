@@ -1,4 +1,4 @@
-package heroclipse.editor;
+package heroclipse.editors;
 
 import org.eclipse.jface.viewers.CellEditor;
 import org.eclipse.jface.viewers.EditingSupport;

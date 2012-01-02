@@ -1,4 +1,4 @@
-package heroclipse.editor;
+package heroclipse.editors;
 
 import java.util.HashMap;
 import heroclipse.Activator;
