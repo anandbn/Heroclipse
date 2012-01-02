@@ -1,5 +1,6 @@
-package heroclipse;
+package heroclipse.preferences;
 
+import heroclipse.Activator;
 import heroclipse.utils.HeroclipsePreferencesUtil;
 
 import java.util.HashMap;
@@ -16,7 +17,6 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Button;
-import org.eclipse.wb.swt.ResourceManager;
 import org.eclipse.swt.events.MouseAdapter;
 import org.eclipse.swt.events.MouseEvent;
 import org.osgi.service.prefs.Preferences;
@@ -25,7 +25,7 @@ import com.heroku.api.HerokuAPI;
 
 //import com.heroku.api.HerokuAPI;
 
-public class HerokuPreferencesPagev3 extends PreferencePage implements IWorkbenchPreferencePage{
+public class HerokuPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage{
 	private Text text;
 	private Text text_1;
 	private Text text_2;
@@ -34,8 +34,8 @@ public class HerokuPreferencesPagev3 extends PreferencePage implements IWorkbenc
 	/**
 	 * Create the preference page.
 	 */
-	public HerokuPreferencesPagev3() {
-		setImageDescriptor(ResourceManager.getPluginImageDescriptor("Heroclipse", "icons/heroku_logo.jpg"));
+	public HerokuPreferencesPage() {
+		setImageDescriptor(Activator.getImageDescriptor("icons/heroku_logo.jpg"));
 		setTitle("Heroku");
 	}
 

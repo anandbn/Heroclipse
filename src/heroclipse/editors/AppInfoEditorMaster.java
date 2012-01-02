@@ -21,7 +21,6 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.wb.swt.SWTResourceManager;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.Button;
@@ -94,7 +93,6 @@ public class AppInfoEditorMaster extends EditorPart {
 		
 		Label lblHttpmyappherokuappcom = new Label(composite, SWT.NONE);
 		lblHttpmyappherokuappcom.setText(appInput.getHerokuApp().getWebUrl());
-		lblHttpmyappherokuappcom.setFont(SWTResourceManager.getFont("Lucida Grande", 11, SWT.BOLD));
 		new Label(composite, SWT.NONE);
 		
 		Label lblGitUrl = new Label(composite, SWT.NONE);
@@ -104,7 +102,6 @@ public class AppInfoEditorMaster extends EditorPart {
 		
 		Label lblGitmyappherokuappcom = new Label(composite, SWT.NONE);
 		lblGitmyappherokuappcom.setText(appInput.getHerokuApp().getGitUrl());
-		lblGitmyappherokuappcom.setFont(SWTResourceManager.getFont("Lucida Grande", 11, SWT.BOLD));
 		new Label(composite, SWT.NONE);
 		
 		Label lblDomainName = new Label(composite, SWT.NONE);

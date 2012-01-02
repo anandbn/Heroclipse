@@ -3,7 +3,6 @@ package heroclipse.editors;
 import java.util.HashMap;
 import java.util.Map;
 
-import heroclipse.Activator;
 import heroclipse.utils.HeroclipsePreferencesUtil;
 
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -17,29 +16,20 @@ import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorSite;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.part.EditorPart;
-import org.eclipse.swt.widgets.TabFolder;
-import org.eclipse.swt.widgets.TabItem;
-import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.wb.swt.SWTResourceManager;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.Text;
 
 import com.heroku.api.Collaborator;
 import com.heroku.api.HerokuAPI;
-import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.events.MouseAdapter;
 import org.eclipse.swt.events.MouseEvent;
 
 public class AppEnviromentEditor extends EditorPart {
 
 	public static final String ID = "heroclipse.editors.AppEnviromentEditor"; //$NON-NLS-1$
-	private Table table;
-	private Text text_1;
 	private TableViewer viewer;
 	private HerokuAppEditorInput appInput;
 	public AppEnviromentEditor() {

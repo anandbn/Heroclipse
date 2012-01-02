@@ -36,7 +36,7 @@
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
-      <page class="heroclipse.HerokuPreferencesPagev3"
+      <page class="heroclipse.preferences.HerokuPreferencesPage"
             id="Heroclipse.page1"
             name="Heroku">
       </page>
