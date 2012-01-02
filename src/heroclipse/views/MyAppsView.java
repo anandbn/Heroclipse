@@ -1,11 +1,8 @@
 package heroclipse.views;
 
 
-import heroclipse.editors.AppInfoEditor;
 import heroclipse.editors.HerokuAppEditor;
 import heroclipse.editors.HerokuAppEditorInput;
-import heroclipse.utils.HeroclipsePreferencesUtil;
-
 import java.util.List;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Table;

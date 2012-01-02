@@ -1,6 +1,6 @@
 package heroclipse.handlers;
 
-import heroclipse.editors.AppInfoEditor;
+import heroclipse.editors.AppInfoEditorMaster;
 import heroclipse.editors.HerokuAppEditorInput;
 
 import org.eclipse.core.commands.AbstractHandler;
@@ -28,7 +28,7 @@ public class ViewAppInfoHandler extends AbstractHandler implements IHandler {
 			Object obj = strucSelection.getFirstElement();
 			IWorkbenchPage myAppsViewPage = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
 			try {
-				myAppsViewPage.openEditor(new HerokuAppEditorInput((App)obj), AppInfoEditor.ID);
+				myAppsViewPage.openEditor(new HerokuAppEditorInput((App)obj), AppInfoEditorMaster.ID);
 				
 			} catch (PartInitException e) {
 				// TODO Auto-generated catch block
